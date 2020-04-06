@@ -22,7 +22,7 @@ import org.apache.logging.log4j.LogManager
 
 class ScalaLanguageAdapter extends LanguageAdapter {
 
-  private val logger = LogManager.getFormatterLogger("ScalaLanguageAdapter")
+  private lazy val logger = LogManager.getFormatterLogger("ScalaLanguageAdapter")
 
   override def create[T](modContainer: ModContainer, s: String, aClass: Class[T]): T = {
     try {
